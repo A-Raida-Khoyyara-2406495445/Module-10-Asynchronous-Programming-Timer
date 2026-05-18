@@ -27,3 +27,27 @@ Raida's Computer: done!
 Ini karena `spawn` hanya mendaftarkan task ke queue, tidak langsung menjalankannya
 Task baru dieksekusi ketika `executor.run()` dipanggil
 `println!("hey hey!")` adalah kode synchronous yang langsung dijalankan
+
+## Experiment 1.3: Multiple Spawn and removing drop
+### Screenshot
+
+![Experiment 1.3 Result](assets/images/experiment13.jpg)
+
+
+### Urutan Output:
+```zsh
+Raida's Computer: hey! hey!
+Raida's Computer: howdy!
+Raida's Computer: howdy2!
+Raida's Computer: howdy3!
+Raida's Computer: done!
+Raida's Computer: done2!
+Raida's Computer: done3!
+```
+
+### Penjelasan:
+- `drop(spawner)` menutup channel pengiriman task
+- Tanpa `drop`, executor menunggu selamanya untuk task berikutnya
+- `spawner` berfungsi sebagai pintu masuk task
+- `executor` adalah pekerja yang memproses task
+- `drop(spawner)` adalah sinyal tidak ada task baru lagi
