@@ -12,7 +12,7 @@ melakukan hal lain (jika ada task lain).
 ## Experiment 1.2: Understanding How It Works
 ### Screenshot
 
-![Experiment 1.2 Result](assets/images/experiment12.jpg)
+![Experiment 1.2 Result](assets/images/experiment12.png)
 
 
 ### Urutan Output:
@@ -31,7 +31,7 @@ Task baru dieksekusi ketika `executor.run()` dipanggil
 ## Experiment 1.3: Multiple Spawn and removing drop
 ### Screenshot
 
-![Experiment 1.3 Result](assets/images/experiment13.jpg)
+![Experiment 1.3 Result](assets/images/experiment13.png)
 
 
 ### Urutan Output:
